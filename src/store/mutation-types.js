@@ -1,0 +1,10 @@
+export const PLAY_ID="PLAY_ID"
+export const PLAY_BTN="PLAY_BTN"
+export const PLAY_INDEX="PLAY_INDEX"
+export const PLAY_LIST="PLAY_LIST"
+export const ADD_INDEX="ADD_INDEX"
+export const REDUCE_INDEX="REDUCE_INDEX"
+export const PLAY_PAGE="PLAY_PAGE"
+export const PLAY_FLAG="PLAY_FLAG"
+export const ADD_FAVORITE = 'ADD_FAVORITE' //添加收藏列表
+export const REDUCE_FAVORITE="REDUCE_FAVORITE"

@@ -1,31 +1,36 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+     <!-- <keep-alive> -->
+      <router-view></router-view>
+    <!-- </keep-alive> -->
+  
+    <Player v-show="this.getPlayPage"/>
+   <BottomSidebar/>
   </div>
 </template>
-
+<script>
+import {mapGetters} from "vuex"
+import BottomSidebar from "./components/BottomSidebar/BottomSidebar"
+import Player from "./views/Player"
+export default {
+    name:"App",
+    components:{
+      Player,
+    BottomSidebar
+    },
+    computed: {
+      ...mapGetters(["getPlayPage"])
+    },
+}
+</script>
 <style>
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: PingFang SC,STHeitiSC-Light,Helvetica-Light,arial,sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   color: #2c3e50;
-}
-#nav {
-  padding: 30px;
-}
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 </style>
